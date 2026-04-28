@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AllergyScore – Support</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green: #2D6A4F;
+      --green-light: #40916C;
+      --bg: #F8FAF9;
+      --surface: #FFFFFF;
+      --text: #1A1A1A;
+      --muted: #555F5C;
+      --border: #D8E5DF;
+      --radius: 12px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--green);
+      color: #fff;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      margin-top: 8px;
+      font-size: 1.05rem;
+      opacity: 0.85;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 64px;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--green);
+      margin: 40px 0 16px;
+    }
+
+    h2:first-child { margin-top: 0; }
+
+    .faq {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    details {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    summary {
+      padding: 16px 20px;
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      user-select: none;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    summary::after {
+      content: "+";
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--green-light);
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+
+    details[open] summary::after {
+      transform: rotate(45deg);
+    }
+
+    details p {
+      padding: 0 20px 16px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    .contact-card p {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .contact-card a.btn {
+      display: inline-block;
+      background: var(--green);
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.15s;
+    }
+
+    .contact-card a.btn:hover { background: var(--green-light); }
+
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+    }
+
+    footer a { color: var(--green); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>AllergyScore</h1>
+  <p>Track your allergies. Discover your triggers.</p>
+</header>
+
+<main>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq">
+
+    <details>
+      <summary>What is AllergyScore?</summary>
+      <p>AllergyScore helps you understand how your environment affects your allergies. Log how you feel each day, and the app correlates your symptoms with real-time pollen counts, air quality, weather, and your personal triggers to reveal patterns over time.</p>
+    </details>
+
+    <details>
+      <summary>How do I log my symptoms?</summary>
+      <p>Tap the <strong>+</strong> button on the home screen to start a log entry. Rate how you feel overall, then optionally detail individual symptoms (sneezing, itchy eyes, congestion, etc.) on a scale from Fine to Severe. Logging takes under 30 seconds.</p>
+    </details>
+
+    <details>
+      <summary>Why does the app need my location?</summary>
+      <p>AllergyScore uses your location to fetch local pollen levels, air quality index (AQI), and weather conditions at the time you log symptoms. This environmental data is the key ingredient for discovering your personal trigger patterns. Location is only accessed when you open the app or log a symptom.</p>
+    </details>
+
+    <details>
+      <summary>What's the difference between free and Premium?</summary>
+      <p>The free version lets you log symptoms, see your AllergyScore, and export one report. <strong>Premium</strong> unlocks unlimited report sharing, unlimited city checks with the Relocation Shield, and personalized Daily Briefs — an AI-generated morning summary of today's allergy outlook based on your history.</p>
+    </details>
+
+    <details>
+      <summary>How do I export or share a report?</summary>
+      <p>Go to <strong>Reports</strong> in the app, tap <em>Generate Report</em>, and choose to share or save as a PDF. Free users can generate one report; Premium users can generate and share unlimited reports.</p>
+    </details>
+
+    <details>
+      <summary>What is the Relocation Shield?</summary>
+      <p>The Relocation Shield lets you check other cities to see how your allergies might fare there. It shows current pollen and AQI levels, a year-round pollen calendar, estimated indoor humidity (dust mite risk), and a personalized health score from 0–100 based on your specific triggers.</p>
+    </details>
+
+    <details>
+      <summary>How do I cancel my Premium subscription?</summary>
+      <p>Subscriptions are managed by Apple or Google — AllergyScore never handles billing directly.
+        <br><br>
+        <strong>iPhone/iPad:</strong> Settings → [your name] → Subscriptions → AllergyScore → Cancel.<br>
+        <strong>Android:</strong> Play Store → Profile → Payments &amp; subscriptions → Subscriptions → AllergyScore → Cancel.
+      </p>
+    </details>
+
+    <details>
+      <summary>How do I delete my data?</summary>
+      <p>Email us at <a href="mailto:developer4565@gmail.com">developer4565@gmail.com</a> with the subject "Delete my data" and we will delete all data associated with your device within 30 days.</p>
+    </details>
+
+  </div>
+
+  <h2>Contact Support</h2>
+
+  <div class="contact-card">
+    <p>Can't find the answer you're looking for? We're happy to help.</p>
+    <a href="mailto:developer4565@gmail.com" class="btn">Email Support</a>
+  </div>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 AllergyScore &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a></p>
+</footer>
+
+</body>
+</html>
