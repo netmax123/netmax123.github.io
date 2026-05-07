@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoodCheck – Support</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --indigo: #475D92;
+      --indigo-light: #6E80B0;
+      --bg: #F7F8FB;
+      --surface: #FFFFFF;
+      --text: #1A1A1A;
+      --muted: #555F6B;
+      --border: #DCE0EA;
+      --radius: 12px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--indigo);
+      color: #fff;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      margin-top: 8px;
+      font-size: 1.05rem;
+      opacity: 0.85;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 64px;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--indigo);
+      margin: 40px 0 16px;
+    }
+
+    h2:first-child { margin-top: 0; }
+
+    .faq {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    details {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    summary {
+      padding: 16px 20px;
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      user-select: none;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    summary::after {
+      content: "+";
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--indigo-light);
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+
+    details[open] summary::after {
+      transform: rotate(45deg);
+    }
+
+    details p {
+      padding: 0 20px 16px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    .contact-card p {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .contact-card a.btn {
+      display: inline-block;
+      background: var(--indigo);
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.15s;
+    }
+
+    .contact-card a.btn:hover { background: var(--indigo-light); }
+
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+    }
+
+    footer a { color: var(--indigo); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>FoodCheck</h1>
+  <p>Scan any label. Know its glycemic index.</p>
+</header>
+
+<main>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq">
+
+    <details>
+      <summary>What is FoodCheck?</summary>
+      <p>FoodCheck reads any nutrition label with AI and tells you exactly what you're about to eat — glycemic index, glycemic load, hidden sugars, key nutrients, and a clear Low / Medium / High verdict. No typing, no guessing.</p>
+    </details>
+
+    <details>
+      <summary>How do I scan a label?</summary>
+      <p>Open the <strong>Scan</strong> tab, point your camera at the nutrition label, and tap the shutter button. The app extracts the nutrient text, sends it to your selected AI engine, and returns a full breakdown in seconds. You can also tap the gallery icon to import a photo from your library.</p>
+    </details>
+
+    <details>
+      <summary>Why does the app need camera and photo access?</summary>
+      <p>FoodCheck needs camera access to capture nutrition labels in real time, and photo library access if you'd rather pick an existing photo. We never look at any photos beyond the ones you explicitly select. You can revoke either permission in your device Settings at any time.</p>
+    </details>
+
+    <details>
+      <summary>What's the difference between Gemini and Claude?</summary>
+      <p>You can switch AI engines at any time in <strong>Settings → AI Model</strong>. <strong>Gemini</strong> is faster and great for everyday scans of clear labels. <strong>Claude</strong> takes a moment longer but produces deeper analysis, more accurate hidden-sugar detection, and richer health recommendations. Try both and pick what fits your style.</p>
+    </details>
+
+    <details>
+      <summary>What's the difference between free and Premium?</summary>
+      <p>The free version gives you a daily quota of scans. <strong>Premium</strong> unlocks unlimited scans, full scan history, the personal shopping list, and access to the Claude AI engine for detailed reports.</p>
+    </details>
+
+    <details>
+      <summary>How accurate is the glycemic index score?</summary>
+      <p>FoodCheck reads the actual nutrition panel — total carbs, sugars, fiber, protein, and ingredients — and uses AI to estimate the GI based on accepted glycemic-index research. Scores are estimates, not medical advice. If you have diabetes or another medical condition, always consult your doctor or dietitian before changing your diet.</p>
+    </details>
+
+    <details>
+      <summary>Can I save my scans?</summary>
+      <p>Yes. Tap the star on any result to save it to <strong>Favorites</strong>, and view your full <strong>History</strong> from the bottom tab. Filter by Low, Medium, or High GI to plan smarter grocery runs.</p>
+    </details>
+
+    <details>
+      <summary>What languages does FoodCheck support?</summary>
+      <p>The interface and AI analysis are available in English, Spanish, Portuguese, French, German, and Russian. You can change the language in <strong>Settings → Language</strong> at any time.</p>
+    </details>
+
+    <details>
+      <summary>How do I cancel my Premium subscription?</summary>
+      <p>Subscriptions are managed by Apple or Google — FoodCheck never handles billing directly.
+        <br><br>
+        <strong>iPhone/iPad:</strong> Settings → [your name] → Subscriptions → FoodCheck → Cancel.<br>
+        <strong>Android:</strong> Play Store → Profile → Payments &amp; subscriptions → Subscriptions → FoodCheck → Cancel.
+      </p>
+    </details>
+
+    <details>
+      <summary>How do I delete my data?</summary>
+      <p>Most of your data lives only on your device — clear scan history any time from inside the app. To delete any server-side records, email <a href="mailto:developer4565@gmail.com">developer4565@gmail.com</a> with the subject "Delete my data" and we will delete it within 30 days.</p>
+    </details>
+
+  </div>
+
+  <h2>Contact Support</h2>
+
+  <div class="contact-card">
+    <p>Can't find the answer you're looking for? We're happy to help.</p>
+    <a href="mailto:developer4565@gmail.com" class="btn">Email Support</a>
+  </div>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 FoodCheck &nbsp;·&nbsp; <a href="foodcheck-privacy.html">Privacy Policy</a></p>
+</footer>
+
+</body>
+</html>
