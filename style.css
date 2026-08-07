@@ -1,0 +1,65 @@
+/* One stylesheet for both legal pages. Plain, readable, and light or dark to match the reader. */
+:root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --surface: #f4f6f8;
+    --text: #16191d;
+    --muted: #5b6470;
+    --line: #e2e6ea;
+    --accent: #0064d2; /* the app's eBay blue */
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #101317;
+        --surface: #181c22;
+        --text: #e7eaee;
+        --muted: #a2acb8;
+        --line: #262b33;
+        --accent: #9cc6ff;
+    }
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0 auto;
+    padding: 32px 20px 72px;
+    max-width: 44rem;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+}
+
+header { border-bottom: 1px solid var(--line); padding-bottom: 20px; margin-bottom: 28px; }
+h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 6px; }
+h2 { font-size: 1.15rem; margin: 34px 0 8px; }
+h3 { font-size: 1rem; margin: 22px 0 6px; }
+p, li { color: var(--text); }
+a { color: var(--accent); }
+.updated { color: var(--muted); font-size: 0.9rem; margin: 0; }
+.lede { color: var(--muted); }
+
+.summary {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 16px 20px;
+    margin: 24px 0 8px;
+}
+.summary p:first-child { margin-top: 0; }
+.summary p:last-child { margin-bottom: 0; }
+
+table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 0.95rem; }
+th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+th { color: var(--muted); font-weight: 600; }
+.scroll { overflow-x: auto; }
+
+footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.9rem;
+}
